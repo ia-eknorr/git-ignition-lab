@@ -26,19 +26,22 @@ This is a _Getting Started_ tutorial intended for those who are new or newer to 
   In order to perform version control on Ignition, ensure the following are properly set up or installed:
 
 ### Required
+  - IA VPN connection
+    - Only required if using on prem GitHub
   - [Ignition](https://inductiveautomation.com/downloads/)
     - Either in a Docker container or installed on host
   - [Git](https://git-scm.com/downloads)
     - Installed on host
-
-### Recommended
-  - [Visual Studio Code](https://code.visualstudio.com/Download)
-    - Highly recommended (VSCode setup guide coming soon!)
   - [GitHub](https://github.com) access
     - Log in via [Duo](https://ia.login.duosecurity.com/central/)
     - Search for "Github Enterprise (on prem)"
     - If Enterprise github is not available, ask your manager for access, and get started with a personal account for the time being
       - Do not put any IA material on your personal GitHub account. This is an exception made for training purposes only.
+
+### Recommended
+  - [Visual Studio Code](https://code.visualstudio.com/Download) (VS Code)
+    - Highly recommended (VSCode setup guide coming soon!)
+    - This guide specifically references VS Code and will make following along easier.
 
 > :bulb: **_FAQ_**: What if I don't have access to the on prem Github Enterprise server yet?
 >
@@ -68,7 +71,7 @@ The goal of this exercise is to focus on version control and how it works with I
 ![Integrated Terminal](images/integrated-terminal.png)
    1. Within the terminal, verify you are in the correct directory by typing the command `pwd` (`P`rint `W`orking `D`irectory). This directory should be within the project name, `samplequickstart`.
       - For Mac the directory should be: `/usr/local/ignition/data/projects/samplequickstart`
-      - For Windows the directory should be: `C://Program Files Inductive Automation/Ignition/data/projects/samplequickstart`
+      - For Windows the directory should be: `C:\Program Files\Inductive Automation\Ignition\data\projects\samplequickstart`
 #### Log in to Github
 Login to Github with the integrated terminal by running the following commands:
 
@@ -82,7 +85,7 @@ git config --global user.email "your@email.addr"
 1. At the top level of your directory, create and save a file named `.gitignore` with the following code:
     ```python
     # Ignition Resource Content
-    ./resources/
+    .resources
     ```
     ![gitignore](images/gitignore.png)
    -  This will ignore all of Ignition's resource files, which frequently change and do not need to be version controlled
@@ -119,14 +122,16 @@ git config --global user.email "your@email.addr"
 - `git remote add origin <Repository Link>`: 
   - `remote add` refers to adding a location where the work is stored. In this case, it is held remotely on GitHub.
   - `origin` is an alias for a particular repository. In this case, the link you have added.
-  - `<Repository Link>` is the repository which will be herein referred to as `origin`. The link to your repository is is a combination of the github url, your username (or the organization the repo is made under), and the name of your repository. In the example, the url is: `https://inductive-git.ia.local/eknorr/git-ignition-example`.
+  - `<Repository Link>` is the repository which will be herein referred to as `origin`. The link to your repository is a combination of the github url, your username (or the organization the repo is made under), and the name of your repository. In the example, the url is: `https://inductive-git.ia.local/eknorr/git-ignition-lab.git`.
 - `git add .`:
   - `add .` adds the work you have done in the current directory to the staging area. Because the repository has no previous commits, this will be many Ignition files. The `.` is used to chose all changed files of the directory you are working in.
 - `git commit -m "Initial commit"`:
   - `commit` is the command for committing your work. A commit is good to do regularly, it allows for going back to the exact state of your work at the time of the commit.
   - `-m "Initial commit"` adds a message to the commit. In this case, the message is "Initial commit". It is important to be specific when writing the messages as it becomes difficult to remember what each commit was for and can be confusing if there was ever a need to rollback to a specific commit.
   - Without the `-m` it will open a text editor with a file that you can type the message into.
-- `git push origin main` allows for pushing all of the commits to the remote main.
+- `git push -u origin main` allows for pushing all of the commits to the remote main.
+  - `-u` links a local branch to a remote branch for subsequent push/pull commands. The local branch you push is automatically linked with the remote branch. In this case, whenever you `git push` or `git pull` after this first command, git knows the upstream branch to your local `main` branch is `origin/main`.
+  - After the first time pushing to a branch, the `-u` flag is not needed, and pushing new code can be accomplished by `git push`.
 
 
 You have just made and initialized a GitHub repository. To verify, you can go to your GitHub account and see the new repository. Below is an example
@@ -242,7 +247,7 @@ The goal of the pull request is to only have intended changes present. This mean
     - From here search the project for the characters ">>". This will show all conflicts. For every conflict, select whether you wand the HEAD or incoming version, save, and commit.
     - Push your code out with these newly resolved conflicts and look at GitHub to verify there are no more conflicts. 
   - **Missing File:** Sometimes you will accidentally delete a file you didn't mean to. To fix this, use the following command: ```git checkout origin/branch_to_merge_with path/to/deleted/file```. For example, ```git checkout origin/main ignition/script-python/Example/code.py``` will add back the main branch version of `Example/code.py`.
-  - **Reset to Previous Commit:** In the case you want to go back to a previous commit, find the commit you whish to go back to. Then use this command `git reset <commit id>`. This would look something like: `git reset e0b5ab11f1eeac6116b5a7abf4cbdf9b12f26990`.
+  - **Reset to Previous Commit:** In the case you want to go back to a previous commit, find the commit you wish to go back to. Then use this command `git reset <commit id>`. This would look something like: `git reset e0b5ab11f1eeac6116b5a7abf4cbdf9b12f26990`.
     - The commit id can be found by clicking the "commit" link in the right hand corner of the GitHub branch that would contain your commit, or by running `git log`
       - To get out of `git log`, type `q`
 
