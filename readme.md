@@ -172,13 +172,20 @@ Now that your repository has been initialized, it's time to add a new feature.
 >       - `git add path/to/unexpected/file && git commit -m "I need these changes, but they don't belong to the other part of my feature"`
 >       - `git add . && git commit -m "I included all my changes, even the ones I didn't expect"`
 
-6. Commit the new feature to the local repository by running the command `git commit -m "Feature: Changed background color"` in the integrated terminal.
-     - This is the `commit` command that was done earlier, but now to commit the new feature.
+6. Add and commit the new feature to the local repository by running the following commands:
+
+    > git add .
+    >
+    > git commit -m "Feature: Changed background color"
+    
+    - Recall that `git add .` adds _all_ changes found in `git status` to the staging area to be committed.
+    - This is the `commit` command that was done earlier, but now to commit the new feature.
 
 7. Push the new feature from to the remote repository
-    - `git push origin HEAD`
-      - `HEAD` is the current branch. This command in full is to push to the remote branch, `feature/change-background-color`.
-      - Make sure you are connected to the IA VPN if your remote repository is hosted on inductive-git.ia.local
+    > `git push -u origin HEAD`
+    - `-u` sets the remote repository's version of the branch as the upstream of the branch. This means that when pushing code to the same branch in the future, only `git push` is needed because git already knows where to push to.
+    - `HEAD` is the current branch. This command in full is to push to the remote branch, `feature/change-background-color`.
+    - Make sure you are connected to the IA VPN if your remote repository is hosted on inductive-git.ia.local
     - You should see in the terminal a new branch was created.
       ![Results from `git push origin HEAD`](images/new-branch-push.png)
 
