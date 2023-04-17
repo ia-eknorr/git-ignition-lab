@@ -65,7 +65,7 @@ The goal of this exercise is to focus on version control and how it works with I
 ### Initialize Repository 
 #### Open the project on Visual Studio Code
 1. Open VS Code and navigate to the project directory
-   1. Select `File/Open...` and open the Ignition project
+   1. Select `File/Open Folder...` and open the Ignition project located in the `data/projects` folder.
       1. Ex: `<ignition-install-path>/data/projects/quickstart`
 2. In the VS Code `EXPLORER` tab, right click the project and select `Open in Integrated Terminal`
 ![Integrated Terminal](images/integrated-terminal.png)
