@@ -286,9 +286,10 @@ The goal of the pull request is to only have intended changes present. This mean
   - From here search the project for the characters ">>". This will show all conflicts. For every conflict, select whether you wand the HEAD or incoming version, save, and commit.
   - Push your code out with these newly resolved conflicts and look at GitHub to verify there are no more conflicts.
 - **Missing File:** Sometimes you will accidentally delete a file you didn't mean to. To fix this, use the following command: ```git checkout origin/branch_to_merge_with path/to/deleted/file```. For example, ```git checkout origin/main ignition/script-python/Example/code.py``` will add back the main branch version of `Example/code.py`.
-- **Reset to Previous Commit:** In the case you want to go back to a previous commit, find the commit you wish to go back to. Then use this command `git reset <commit id>`. This would look something like: `git reset e0b5ab11f1eeac6116b5a7abf4cbdf9b12f26990`.
-  - The commit id can be found by clicking the "commit" link in the right hand corner of the GitHub branch that would contain your commit, or by running `git log`
-    - To get out of `git log`, type `q`
+- **Reset to Previous Commit:** In the case you want to go back to a previous commit, find the commit you wish to go back to. Then use this command `git reset <commit id>`. This would look something like: `git reset 8e422f8`.
+  - The commit id can be found by clicking the "commit" link in the right hand corner of the GitHub branch that would contain your commit, or by running `git reflog`
+    - The items on the reflog are sorted starting with the most recent at the top
+    - To get out of `git reflog`, type `q`
 
 ## Additional Resources
 
