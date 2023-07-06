@@ -106,6 +106,10 @@ git config --global user.email "your@email.addr"
     ![gitignore](images/gitignore.png)
    - This will ignore all of Ignition's resource files, which frequently change and do not need to be version controlled
 
+> :bulb: **_FAQ_**: What if I was blocked from creating a new file in my repository?
+>
+> This can happen for several reasons, and it usually depends on the exact error that git gives you when trying to create the file. Typically, running VSCode as Administrator solves this issue (if on Windows - this issue has not been seen on Macs).
+
 > :memo: **_Note_**: .gitignore files are very useful - it specifies intentionally untracked files that Git should ignore. These files will still exist on the gateway, and will not be removed, just will not be version controlled.
 >
 > Although this example is Ignition specific, it is also possible to ignore any other type of file that shouldn't be tracked. You may want to also exclude:
