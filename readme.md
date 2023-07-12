@@ -7,7 +7,6 @@
   - [Purpose](#purpose)
   - [Before Getting Started](#before-getting-started)
     - [Required](#required)
-    - [Recommended](#recommended)
   - [Procedure](#procedure)
     - [Set up the Ignition Gateway](#set-up-the-ignition-gateway)
     - [Initialize Repository](#initialize-repository)
@@ -32,23 +31,14 @@ This is a _Getting Started_ tutorial intended for those who are new or newer to 
 
 ### Required
 
+- [Proper workstation setup](https://inductive-git.ia.local/eknorr/version-control/blob/main/Workstation%20Setup.md)
+  - Git
+  - Github CLI
+  - Visual Studio Code
 - IA VPN connection
   - Only required if using on prem GitHub
 - [Ignition](https://inductiveautomation.com/downloads/)
   - Either in a Docker container or installed on host
-- [Git](https://git-scm.com/downloads)
-  - Installed on host
-- [GitHub](https://github.com) access
-  - Log in via [Duo](https://ia.login.duosecurity.com/central/)
-  - Search for "Github Enterprise (on prem)"
-  - If Enterprise github is not available, ask your manager for access, and get started with a personal account for the time being
-    - Do not put any IA material on your personal GitHub account. This is an exception made for training purposes only.
-
-### Recommended
-
-- [Visual Studio Code](https://code.visualstudio.com/Download) (VS Code)
-  - Highly recommended (VSCode setup guide coming soon!)
-  - This guide specifically references VS Code and will make following along easier.
 
 > :bulb: **_FAQ_**: What if I don't have access to the on prem Github Enterprise server yet?
 >
