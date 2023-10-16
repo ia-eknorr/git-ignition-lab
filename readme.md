@@ -131,7 +131,7 @@ git config --global user.email "your@email.addr"
 - `git remote add origin <Repository Link>`:
   - `remote add` refers to adding a location where the work is stored. In this case, it is held remotely on GitHub.
   - `origin` is an alias for a particular repository. In this case, the link you have added.
-  - `<Repository Link>` is the repository which will be herein referred to as `origin`. The link to your repository is a combination of the github url, your username (or the organization the repo is made under), and the name of your repository. In the example, the url is: `https://inductive-git.ia.local/eknorr/git-ignition-lab.git`.
+  - `<Repository Link>` is the repository which will be herein referred to as `origin`. The link to your repository is a combination of the github url, your username (or the organization the repo is made under), and the name of your repository. In the example, the url is: `https://github.com/ia-eknorr/ignition-version-control.git`.
 - `git add .`:
   - `add .` adds the work you have done in the current directory to the staging area. Because the repository has no previous commits, this will be many Ignition files. The `.` is used to chose all changed files of the directory you are working in.
 - `git commit -m "Initial commit"`:
@@ -280,4 +280,4 @@ The goal of the pull request is to only have intended changes present. This mean
 
 [Version Control Guide](https://github.com/ia-eknorr/ignition-version-control)
 
-[My Example](https://inductive-git.ia.local/eknorr/git-ignition-example)
+[My Example](https://github.com/ia-eknorr/git-ignition-example)
