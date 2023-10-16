@@ -23,7 +23,7 @@
 
 ## Purpose
 
-This is a _Getting Started_ tutorial intended for those who are new or newer to Git version control with Ignition. By the end of this tutorial, you should have a basic understanding of how to set up Git with Ignition and the workflow to start tracking your codebase with Git. This is written like a lab, so follow along on your own, use the [IA Ignition Version Control Guide](https://inductive-git.ia.local/eknorr/version-control), and ask [@eknorr](https://inductive-git.ia.local/eknorr) (or on [slack](eknorr@inductiveautomation.com)) for help.
+This is a _Getting Started_ tutorial intended for those who are new or newer to Git version control with Ignition. By the end of this tutorial, you should have a basic understanding of how to set up Git with Ignition and the workflow to start tracking your codebase with Git. This is written like a lab, so follow along on your own and use the [Ignition Version Control Guide](https://github.com/ia-eknorr/ignition-version-control) or other internet resources as necessary.
 
 ## Before Getting Started
 
@@ -31,22 +31,16 @@ This is a _Getting Started_ tutorial intended for those who are new or newer to 
 
 ### Required
 
-- [Proper workstation setup](https://inductive-git.ia.local/eknorr/version-control/blob/main/Workstation%20Setup.md)
+- [Proper workstation setup](https://github.com/ia-eknorr/ignition-version-control/blob/main/Workstation%20Setup.md)
   - Git
   - Github CLI
   - Visual Studio Code
-- IA VPN connection
-  - Only required if using on prem GitHub
 - [Ignition](https://inductiveautomation.com/downloads/)
   - Either in a Docker container or installed on host
 
-> :bulb: **_FAQ_**: What if I don't have access to the on prem Github Enterprise server yet?
->
-> Ask your manager for access, and get started with a personal account for the time being. Do not put any IA material on your personal GitHub account. This is an exception made for training purposes only.
-
 ## Procedure
 
-The goal of this exercise is to focus on version control and how it works with Ignition. That said, Ignition Quick Start project will be used as a starting place so there is something to add to a repository and version control. It is good to note that while this guide is used with Quick Start, the procedure is the same with a project where Quick Start isn't used. All references to the Quick Start project can be replaced with your project name.
+The goal of this exercise is to focus on version control and how it works with Ignition. The Ignition Quick Start project will be used as a starting place so there is something to add to a repository and version control. It is good to note that while this guide is used with Quick Start, the procedure is the same with a project where Quick Start isn't used. All references to the Quick Start project can be replaced with your project name.
 
 ---
 
@@ -55,7 +49,7 @@ The goal of this exercise is to focus on version control and how it works with I
 1. Commission and start the Ignition Gateway
 2. After commissioning, select "Yes, Enable Quick Start"
    1. Naturally, this is not required for all implementations
-   2. [Here](https://docs.inductiveautomation.com/display/DOC80/Quick+Start+Guide) is a guide to the Ignition Quick Start if needed
+   2. [Here](https://docs.inductiveautomation.com/display/DOC81/Quick+Start+Guide) is a guide to the Ignition Quick Start if needed
 
 ![Gateway Startup Page](images/ignition-quickstart.png)
 
@@ -115,7 +109,7 @@ git config --global user.email "your@email.addr"
 
 1. In the upper-right corner of any page on the GitHub web browser, use the  drop-down menu, and select New repository
 2. Type a short, descriptive name for the new repository.
-   1. See the [IA Git Style Guide](https://inductive-git.ia.local/eknorr/git-style-guide#repository-setup-1) for help naming your repo
+   1. See the [IA Git Style Guide](https://github.com/ia-eknorr/ignition-git-style-guide) for help naming your repo
 3. Select the "Create repository"
 
 #### Initialize the local repository
@@ -163,7 +157,7 @@ Now that your repository has been initialized, it's time to add a new feature.
      - The `checkout` command allows for navigating to a branch. This command can also be used switching to another branch. For example, to get to the main branch the command is `git checkout main`.
      - The `-b` stands for branch. This creates the new branch.
      - `feature/change-background-color` is the name of your branch.
-       - The [IA Git Style Guide](https://inductive-git.ia.local/eknorr/git-style-guide#branches-1) has a section on branching naming convention that can be used in the future.
+       - The [IA Git Style Guide](https://github.com/ia-eknorr/ignition-git-style-guide#branches-1) has a section on branching naming convention that can be used in the future.
 
 2. Open the Ignition Designer and make a new view called `example_view`.
   ![Creating a New View](images/new-view-ignition.png)
@@ -203,7 +197,6 @@ Now that your repository has been initialized, it's time to add a new feature.
     > `git push -u origin HEAD`
     - `-u` sets the remote repository's version of the branch as the upstream of the branch. This means that when pushing code to the same branch in the future, only `git push` is needed because git already knows where to push to.
     - `HEAD` is the current branch. This command in full is to push to the remote branch, `feature/change-background-color`.
-    - Make sure you are connected to the IA VPN if your remote repository is hosted on inductive-git.ia.local
     - You should see in the terminal a new branch was created.
       ![Results from `git push origin HEAD`](images/new-branch-push.png)
 
@@ -283,8 +276,8 @@ The goal of the pull request is to only have intended changes present. This mean
 
 ## Additional Resources
 
-[Inductive Automation's Version Control Guide](https://www.inductiveautomation.com/resources/article/ignition-8-deployment-best-practices#gitlab-example)
+[Inductive Automation's Deployment Best Practices Guide](https://www.inductiveautomation.com/resources/article/ignition-8-deployment-best-practices#gitlab-example)
 
-[IA's Version Control Guide](https://inductive-git.ia.local/eknorr/version-control)
+[Version Control Guide](https://github.com/ia-eknorr/ignition-version-control)
 
 [My Example](https://inductive-git.ia.local/eknorr/git-ignition-example)
