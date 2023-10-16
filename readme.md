@@ -283,8 +283,8 @@ The goal of the pull request is to only have intended changes present. This mean
 
 ## Additional Resources
 
-[Inductive Automation's Version Control Guide](https://www.inductiveautomation.com/resources/article/ignition-8-deployment-best-practices#gitlab-example)
+[IA's Deployment Best Practices Guide](https://www.inductiveautomation.com/resources/article/ignition-8-deployment-best-practices#gitlab-example)
 
-[IA's Version Control Guide](https://inductive-git.ia.local/eknorr/version-control)
+[Ignition Version Control Guide](https://github.com/ia-eknorr/ignition-version-control)
 
-[My Example](https://inductive-git.ia.local/eknorr/git-ignition-example)
+[My Example](https://github.com/ia-eknorr/git-ignition-example)
