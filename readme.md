@@ -20,6 +20,8 @@
     - [Updating your local repository](#updating-your-local-repository)
   - [Common Errors](#common-errors)
   - [Additional Resources](#additional-resources)
+    - [Questions? Requests?](#questions-requests)
+    - [Cred](#cred)
 
 ## Purpose
 
@@ -281,3 +283,11 @@ The goal of the pull request is to only have intended changes present. This mean
 [Version Control Guide](https://github.com/ia-eknorr/ignition-version-control)
 
 [My Example](https://github.com/ia-eknorr/git-ignition-example)
+
+### Questions? Requests?
+
+If you have any questions or notice something that doesn't look right, open an issue or submit a pull request.
+
+### Cred
+
+Thanks to [Design group](https://github.com/design-group) for the inspiration for this lab.
