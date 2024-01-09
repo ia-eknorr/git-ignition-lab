@@ -85,8 +85,8 @@ git config --global user.email "your@email.addr"
 1. At the top level of your directory, create and save a file named `.gitignore` with the following code:
 
     ```python
-    # Ignition Resource Content
-    .resources
+    # Ignition Vision Content
+    com.inductiveautomation.vision 
     ```
 
     ![gitignore](images/gitignore.png)
