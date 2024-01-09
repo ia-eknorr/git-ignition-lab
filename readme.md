@@ -290,4 +290,4 @@ If you have any questions or notice something that doesn't look right, open an i
 
 ### Cred
 
-Thanks to [Design group](https://github.com/design-group) for the inspiration for this lab.
+Thanks to [Design Group](https://github.com/design-group) for the inspiration for this lab.
