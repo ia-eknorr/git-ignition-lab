@@ -1,5 +1,12 @@
 # Ignition Example
 
+> [!IMPORTANT]
+> This content has moved. The hands-on lab from this repository is now part of [ignition-guides](https://ia-eknorr.github.io/ignition-guides/), the modern community resource for DevOps workflows with Ignition.
+>
+> Go directly to: **[Version Control Lab](https://ia-eknorr.github.io/ignition-guides/docs/labs/version-control-lab)**
+>
+> This repository will be archived once the linked forum post is updated.
+
 ## Table of Contents
 
 - [Ignition Example](#ignition-example)
